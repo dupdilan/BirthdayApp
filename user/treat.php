@@ -1,3 +1,9 @@
+<?php
+    // session_start();
+    
+    require_once('php_action/session.php'); 
+     $nic=$_SESSION['nic'];
+?>
 <html>
 <head>
     <title>Dashbord User</title>
@@ -23,7 +29,7 @@
         <li><a href="userDashbord.php">Dashbord</a></li>
         <li><a href="birthday.php">Birthday</a></li>
         <li><a href="treat.php">Treat</a> </li>
-        <li><a href="../login.php">Logout</a></li>
+        <li><a href="php_action/logout.php">Logout</a></li>
     </ul>
     <br>
     <hr>
@@ -44,23 +50,24 @@
 
         <script>
                                     function statusChange(id){
-                                        //trid=id.split('-')[1];
+                                            //trid=id.split('-')[1];
                                         //alert(trid);
-                                        $(".btn_sub").attr("disabled",true);
+                                        // $(".btn_sub").attr("disabled",true);
                                         $.ajax({
                                             url: "php_action/join.php",
                                             type:"post",
-                                            data:{ val : id, },
+                                            data:{ val : id },
 
                                             success: function(result){
                                                // alert(result);
                                                
-                                               //$('table#sHold tr#'+trid).remove();
+                                               
                                                 alert('Thank you for joining , Have a fun !!');
                                                 location.reload();
-
                                         }
+                                        
                                         });
+                                        $('#id').attr("disabled",true);
                                     }
                                     
                                 </script>

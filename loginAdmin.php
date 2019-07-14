@@ -1,34 +1,22 @@
 <html>
 <head>
-    <title>Login</title>
+    <title>Login Admin</title>
 </head>
 <body>
     <div align="center">
-    <h1>Login</h1>
+    <h1>Login Admin Only</h1>
     <h3>Please Input Your Details</h3>
     <table>
-    <form action="php_action/loginHandle.php" method="POST">
+    <form action="php_action/loginHandleAdmin.php" method="POST">
                <tr> 
-                   <td><label>NIC : </label></td>
-                    <td><input type="type" id="txt_nic" name="txt_nic" placeholder="Input NIC"/><td>
+                   <td><label>Email : </label></td>
+                    <td><input type="email" id="txt_email" name="txt_email" placeholder="Input Email"/><td>
                </tr>
                <tr>
                 <td><label>Password : </label></td>
                 <td><input type="password" id="txt_password" name="txt_password" placeholder="Input Password"/></td>
                </tr>
-               <!--
-               <tr>
-                    <td><label>User Type : </label></td>
-                    <td>
-                    <select onchange="convertUserTypeToText(this)" required>
-                            <option >Select User Type</option>
-                            <option >Normal User</option>
-                            <option >Organizer</option>    
-                        </select>
-                    </td>
-                </tr>
--->
-                <input id="txt_UserType" name="txt_UserType" type="hidden"/>
+                
               <tr>
                 <td><button name="btnSubmit" type="submit">Login</button></td>
                 <td><button type="reset">Reset</button></td>
@@ -58,20 +46,10 @@
               
     </form>
                     <tr>
-                        <td>
-                            <a href="loginAdmin.php"><button >Admin Login</button></a>
-                        </td>
+                    <td><a href="login.php"><button>Back</button></a></td>
                     </tr>
     </table>
     </div>
-
-    <script  type="text/javascript">
-										
-										function convertUserTypeToText(ddl) {
-                                         document.getElementById('txt_UserType').value = ddl.options[ddl.selectedIndex].text;
-                                                                }
-                                        
-		</script>
 
 </body>
 

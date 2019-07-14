@@ -1,3 +1,9 @@
+<?php
+    // session_start();
+    
+    require_once('php_action/session.php'); 
+     $nic=$_SESSION['nic'];
+?>
 <html>
 <head>
     <title>Dashbord User</title>
@@ -14,6 +20,9 @@
             border: 1px solid ;
             width: 18%;
         }
+        #li_nic{
+            padding: 100px;
+        }
     </style>
 </head>
 <body>
@@ -23,11 +32,12 @@
         <li><a href="userDashbord.php">Dashbord</a></li>
         <li><a href="birthday.php">Birthday</a></li>
         <li><a href="treat.php">Treat</a> </li>
-        <li><a href="../login.php">Logout</a></li>
+        <li><a href="php_action/logout.php">Logout</a></li>
+        <li ><span id="li_nic"><?php echo $nic ; ?></span></li>
     </ul>
     <br>
     <hr><br>
-        <h2 style="text-align:center;">Welcome to the Birthday App</h2>
+        <h2 style="text-align:center;">Welcome to the Birthday App  <span>Your NIC :<?php echo $nic ; ?></span></h2>
         <br>
         <br>
         <hr>

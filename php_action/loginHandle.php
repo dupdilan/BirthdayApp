@@ -1,4 +1,5 @@
 <?php
+session_start();
 require("connection.php");
 if(isset($_POST["btnSubmit"]))
 {
@@ -19,19 +20,20 @@ if(isset($_POST["btnSubmit"]))
 	{
 		$rec=mysqli_fetch_Array($res);	
 		$organizer=$rec["organizingRole"];
-
+		
             if($organizer=='1')
             {	//organizer DashBoard
                 
 				// //Creating sessions and storing values
-				// $_SESSION["login"]["userName"]=$username;
+				
+				 $_SESSION['nic']=$nic;
 				header("Location:../organizer/organizerDashbord.php");
 			}
 			elseif($organizer=='0'){
                 //User Dahsbord
 
 				// //Creating sessions and storing values
-				// $_SESSION["login"]["userName"]=$username;
+					$_SESSION["nic"]=$nic;
 				header("Location:../user/userDashbord.php");
 			}
 			else{

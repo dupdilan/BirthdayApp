@@ -1,3 +1,9 @@
+<?php
+    // session_start();
+    
+    require_once('php_action/session.php'); 
+     $email=$_SESSION['email'];
+?>
 <html>
 <head>
     <title>Dashbord Admin</title>
@@ -23,12 +29,13 @@
         <li ><a href="adminDashbord.php">Dashbord</a></li>
         <li><a href="organizingTeam.php">Organizing Team</a></li>
         <li><a href="users.php">Users</a> </li>
-        <li><a href="treat.php">treat</a></li>
-        <li><a href="../login.php">Logout</a></li>
+        
+        <li><a href="php_action/logout.php">Logout</a></li>
+        <li ><span id="li_email"><?php echo $email ; ?></span></li>
     </ul>
     <br>
     <hr><br>
-        <h2 style="text-align:center;">Welcome to the Birthday App</h2>
+        <h2 style="text-align:center;">Welcome to the Birthday App  <span>Your Email :<?php echo $email ; ?></span></h2>
         <br>
         <br>
         <hr>

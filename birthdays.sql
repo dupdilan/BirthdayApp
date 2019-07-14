@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 13, 2019 at 02:29 PM
+-- Generation Time: Jul 14, 2019 at 09:29 AM
 -- Server version: 10.1.40-MariaDB
 -- PHP Version: 7.1.29
 
@@ -25,6 +25,28 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `adminlogin`
+--
+
+CREATE TABLE `adminlogin` (
+  `adminID` int(11) NOT NULL,
+  `fullName` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `mobileNo` int(10) NOT NULL,
+  `designation` varchar(50) NOT NULL,
+  `password` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `adminlogin`
+--
+
+INSERT INTO `adminlogin` (`adminID`, `fullName`, `email`, `mobileNo`, `designation`, `password`) VALUES
+(1, 'admin', 'admin@gmail.com', 71123456, '', 'admin');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `listofjoin`
 --
 
@@ -41,7 +63,7 @@ CREATE TABLE `listofjoin` (
 
 INSERT INTO `listofjoin` (`treatJoinId`, `treat_Id`, `userID`, `status_join`) VALUES
 (1, 2, 0, 'join'),
-(8, 2, 0, 'join');
+(16, 0, 0, '');
 
 -- --------------------------------------------------------
 
@@ -97,14 +119,20 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`userID`, `firstName`, `lastName`, `perferredName`, `dateOfBirthday`, `officialEmail`, `personalEmail`, `mobile`, `facebookLink`, `designaion`, `nic`, `studentNo`, `foodPreference`, `note`, `userType`, `password`, `organizingRole`) VALUES
-(1, 'dilan', 'perera', 'dilan', '1996-07-12', '', 'dupdilan@gmail.com', '0767985200', '', '', '961850797v', 'IM/2016/057', 'Non-Veg', 'test', 'Student', 'test', 0),
-(2, 'nimal', 'perera', 'nimal', '1995-07-13', 'asd@gmail.com', '', '0712345678', '', '', '123456789v', '', 'Veg', '0', 'Student', 'test', 0),
+(1, 'dilan', 'perera', 'dilan', '1996-07-12', '', 'dupdilan@gmail.com', '0767985200', '', '', '961850797v', 'IM/2016/057', 'Non-Veg', 'test', 'Student', 'test', 1),
+(2, 'nimal', 'perera', 'nimal', '1995-07-13', 'asd@gmail.com', '', '0712345678', '', '', '123456782v', '', 'Veg', '0', 'Student', 'test', 0),
 (3, 'asd', 'asd', 'asd', '1948-02-04', 'bmndas@gmail.com', '', '07123456789', '', '', '123456712v', '', '', 'asd', 'Temporry Staff', 'test', 0),
-(4, 'asd', 'perera', 'nimal', '1969-07-13', 'asd@gmail.com', '', '0712345678', '', 'lecture', '123456789v', '', 'Non-Veg', '0', 'Academic Staff', 'test', 1);
+(4, 'asd', 'perera', 'nimal', '1969-07-13', 'asd@gmail.com', '', '0712345678', '', 'lecture', '123456789v', '', 'Non-Veg', '0', 'Academic Staff', 'test1', 1);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `adminlogin`
+--
+ALTER TABLE `adminlogin`
+  ADD PRIMARY KEY (`adminID`);
 
 --
 -- Indexes for table `listofjoin`
@@ -132,7 +160,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `listofjoin`
 --
 ALTER TABLE `listofjoin`
-  MODIFY `treatJoinId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `treatJoinId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

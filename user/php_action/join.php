@@ -1,3 +1,4 @@
+
 <?php
 
 $data=$_POST['val'];
@@ -7,8 +8,7 @@ $treatId=$status[1];
 if($status[0]=='btnJoin'){
     $value='join';
     header("Refresh:0; url=treat.php");
-}
-elseif($status[0]=='btnCancel'){
+} else if($status[0]=='btnCancel'){
     $value='cancel';
     header("Refresh:0; url=treat.php");
 }

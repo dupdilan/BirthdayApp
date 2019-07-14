@@ -1,3 +1,9 @@
+<?php
+    // session_start();
+    
+    require_once('php_action/session.php'); 
+     $nic=$_SESSION['nic'];
+?>
 <html>
 <head>
     <title>Dashbord User</title>
@@ -23,7 +29,7 @@
         <li><a href="userDashbord.php">Dashbord</a></li>
         <li><a href="birthday.php">Birthday</a></li>
         <li><a href="treat.php">Treat</a> </li>
-        <li><a href="../login.php">Logout</a></li>
+        <li><a href="php_action/logout.php">Logout</a></li>
     </ul>
     <br>
     <hr>
