@@ -15,7 +15,8 @@
 					echo "<table id='tableUsersRole' border=1 width=100%>
 						<tr>
 							<th height=50px >User ID</th>   
-                            <th>NIC</th>
+							<th>NIC</th>
+							<th>Group</th>
                             <th>Organizing Role</th>
                             
 							
@@ -27,6 +28,7 @@
 						echo "<tr>
 							<td>".$record["userID"]."</td>
 							<td>".$record["nic"]."</td>
+							<td>".$record["userType"]."</td>
                             <td>".$record["organizingRole"]."</td>
                             
 							

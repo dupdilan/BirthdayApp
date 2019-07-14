@@ -37,7 +37,7 @@
     <hr>
     <h3>Add Users</h3>
 
-    <form name="frmUsers" action="php_action/usersHandle.php" method="POST">
+    <form name="frmUsers" action="php_action/usersHandle.php" method="POST" onsubmit="return validateFrm(this);">
             <table >
                 <tr>
                                                                 <?php
@@ -200,7 +200,28 @@
                                                 
                                 ?>
         </div>
-   
+   <script>
+       function validateFrm(form){
+        
+           if(form.txt_mobile.value.length !=10){
+               alert("your mobile number is wrong please check that!")
+               form.txt_mobile.focus();
+                 return false;         
+           }
+           if(form.txt_nic.value != "") {
+            if(form.txt_nic.value.length == 10){
+                alert("Error: NIC must contain at least 10 characters!");
+                form.txt_nic.focus();
+            return false;
+      }
+        if(form.txt_note.value != "") {
+            if(form.txt_note.value.length>= 200){
+                alert("Error: note support only 200 characters!");
+                form.txt_note.focus();
+            return false;
+      }
+       }
+    </script>
 <!--Listeners-->
         <script>
 document.querySelectorAll('#tableUsersAll tr').forEach(e=>e.addEventListener("click",function(){

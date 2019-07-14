@@ -4,7 +4,8 @@
     
 
     $userId=$_POST["txt_userId"];
-    $nic=$_POST["txt_nic"];
+	$nic=$_POST["txt_nic"];
+	$type=$_POST["txt_userType"];
     $role=$_POST["txt_userRole"];
 	
 //Update user organizer
@@ -14,7 +15,7 @@
 	$dbobj=new dbconnect();
 	$con=$dbobj->getcon();
 	
-	$sql="UPDATE users SET organizingRole='$role' WHERE userID='$userId'";
+	$sql="UPDATE users SET organizingRole='$role' WHERE userID='$userId' AND userType != 'Student' ";
 	
 
 	//executting the sql message

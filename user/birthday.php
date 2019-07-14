@@ -18,7 +18,7 @@
             float: left;
             width: 60px;
             border: 1px solid ;
-            width: 18%;
+            width: 15%;
         }
     </style>
 </head>
@@ -29,6 +29,7 @@
         <li><a href="userDashbord.php">Dashbord</a></li>
         <li><a href="birthday.php">Birthday</a></li>
         <li><a href="treat.php">Treat</a> </li>
+        <li><a href="changeMypassword.php">Change Password</a> </li>
         <li><a href="php_action/logout.php">Logout</a></li>
     </ul>
     <br>

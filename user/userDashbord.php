@@ -18,7 +18,7 @@
             float: left;
             width: 60px;
             border: 1px solid ;
-            width: 18%;
+            width: 15%;
         }
         #li_nic{
             padding: 100px;
@@ -32,8 +32,9 @@
         <li><a href="userDashbord.php">Dashbord</a></li>
         <li><a href="birthday.php">Birthday</a></li>
         <li><a href="treat.php">Treat</a> </li>
-        <li><a href="php_action/logout.php">Logout</a></li>
+        <li><a href="changeMypassword.php">Change Password</a> </li>
         <li ><span id="li_nic"><?php echo $nic ; ?></span></li>
+        <li><a href="php_action/logout.php">Logout</a></li>
     </ul>
     <br>
     <hr><br>

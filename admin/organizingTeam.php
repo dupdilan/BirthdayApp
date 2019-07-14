@@ -35,6 +35,8 @@
     <br>
     <hr><br>
        <h3>Organizing Team</h3>
+       <b><span>Organizer role should be assigned Tempory Acadamic staff or Acadamic staff members only  </span></b><br>
+       <br>
         <table>
        <form name="frmUsersRole" action="php_action/organizer.php" method="post">
        
@@ -47,11 +49,15 @@
                     <td><input type="type" id="txt_nic" name="txt_nic" placeholder="click user table" readonly /><td>
                </tr>
                <tr> 
+                   <td><label>User Type: </label></td>
+                    <td><input type="type" id="txt_userType" name="txt_userType" placeholder="click user table " readonly /><td>
+               </tr>
+               <tr> 
                    <td><label>Organizing Role: </label></td>
-                    <td><input type="type" id="txt_userRole" name="txt_userRole" placeholder="you have to input 1 or 0 "/><td>
+                    <td><input type="type" id="txt_userRole" name="txt_userRole" onchange="validateType();" placeholder="you have to input 1 or 0 "/><td>
                </tr>
                <tr>
-                <td><button name="btnSubmit" id="btnSubmit" type="submit" value="update">Update Organizing Role</button></td>
+                <td><button name="btnSubmit" id="btnSubmit"  type="submit" value="update">Update Organizing Role</button></td>
                 <td><button type="reset">Reset</button></td>
                 
               </tr>
@@ -90,6 +96,14 @@
                             
             ?>
     </div>
+<script>
+    function validateType(){
+        var type=document.getElementById('txt_userType').value;
+        if (type=='Student'){
+            alert("you Cannot add student as a Organizer!!!")
+        }
+    }
+</script>
 
 <!--Listeners-->
 <script>
@@ -98,11 +112,13 @@ document.querySelectorAll('#tableUsersRole tr').forEach(e=>e.addEventListener("c
    if(this.rowIndex > 0){
         var userId=this.cells[0].innerHTML;
         var nic=this.cells[1].innerHTML;
-        var role=this.cells[2].innerHTML;
-       
+        var type=this.cells[2].innerHTML;
+        var role=this.cells[3].innerHTML;
+        
         // console.log(userId);
         document.forms['frmUsersRole']['txt_userId'].value = userId;
         document.forms['frmUsersRole']['txt_nic'].value = nic;
+        document.forms['frmUsersRole']['txt_userType'].value = type;
         document.forms['frmUsersRole']['txt_userRole'].value = role;
        
     }

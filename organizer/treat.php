@@ -37,7 +37,7 @@
     <hr>
     <h3>Treat</h3>
     
-    <form name="frmTreat" action="php_action/TreatHandle.php" method="POST">
+    <form name="frmTreat" action="php_action/TreatHandle.php" method="POST" onsubmit="return validateFrm(this);">
             <table >
                 <tr>
                                                                 <?php
@@ -71,11 +71,11 @@
                 </tr>
                 <tr>
                     <td><label>Venue :</label></td>
-                    <td><input id="txt_venue" name="txt_venue" type="text" /></td>
+                    <td><input id="txt_venue" name="txt_venue" type="text" required/></td>
                 </tr>
                 <tr>
                     <td><label>Notes :</label></td>
-                    <td><input id="txt_treatNote" name="txt_treatNote" type="text" /></td>
+                    <td><input id="txt_treatNote" name="txt_treatNote" type="text" required/></td>
                 </tr>
             
                 </table>
@@ -152,7 +152,21 @@
                                
 
 
+
+                               <script>
+       function validateFrm(form){
+        
+          
+        if(form.txt_treatNote.value != "") {
+            if(form.txt_treatNote.value.length>= 1000){
+                alert("Error: note support only 1000 characters!");
+                form.txt_treatNote.focus();
+            return false;
+      }
+       }
+    </script>
 <script>
+
     // //disable button after click at ones
     // document.querySelectorAll('.btn_sub').addEventistner("click",function(){
     //     console.log("tetsghsj");
