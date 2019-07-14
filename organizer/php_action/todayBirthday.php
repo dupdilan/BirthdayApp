@@ -4,8 +4,8 @@
 	            $con=$dbobj->getcon();
 	   
 			//Select Query to fetch all the records in a table
-			$query = "SELECT userID,firstName,lastName,mobile,userType FROM users where DAY(dateOfBirthday)=DAY(CURRENT_DATE) AND MONTH(dateOfBirthday)=MONTH(CURRENT_DATE)";
-		
+			$query = "SELECT userID,firstName,lastName,mobile,userType,dateOfBirthday FROM users where DAY(dateOfBirthday)=DAY(CURRENT_DATE) AND MONTH(dateOfBirthday)=MONTH(CURRENT_DATE)";
+
 			$exec = mysqli_query($con,$query);
 
 			if($exec){
@@ -18,7 +18,8 @@
                             <th>First Name</th>
                             <th>Last Name</th>                    
                             <th>Mobile</th>  
-                            <th>Group </th>
+							<th>Group </th>
+							<th>DOB</th>
 							
 							
 						</tr>";
@@ -31,7 +32,7 @@
                             <td>".$record["lastName"]."</td>
                             <td>".$record["mobile"]."</td>
                             <td>".$record["userType"]."</td>
-                            
+                            <td>".$record["dateOfBirthday"]."</td>
 							
 							
 						</tr>";

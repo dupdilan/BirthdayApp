@@ -18,7 +18,8 @@
                             <th>First Name</th>
                             <th>Last Name</th>                    
                             <th>Mobile</th>  
-                            <th>Group </th>
+							<th>Group </th>
+							<th>DOB</th>
 							
 							
 						</tr>";
@@ -31,7 +32,7 @@
                             <td>".$record["lastName"]."</td>
                             <td>".$record["mobile"]."</td>
                             <td>".$record["userType"]."</td>
-                            
+                            <td>".$record["dateOfBirthday"]."</td>
 							
 							
 						</tr>";

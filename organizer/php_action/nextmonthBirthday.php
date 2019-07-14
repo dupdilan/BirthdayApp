@@ -4,7 +4,7 @@
 	            $con=$dbobj->getcon();
 	   
 			//Select Query to fetch all the records in a table
-			$query = "SELECT * FROM  users WHERE  DATE_ADD(dateOfBirthday, INTERVAL YEAR(CURDATE())-YEAR(dateOfBirthday)+ IF(DAYOFYEAR(CURDATE()) > DAYOFYEAR(dateOfBirthday),1,0)YEAR)  BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL 7 DAY)";
+			$query = "SELECT * FROM  users WHERE  DATE_ADD(dateOfBirthday, INTERVAL YEAR(CURDATE())-YEAR(dateOfBirthday)+ IF(DAYOFYEAR(CURDATE()) > DAYOFYEAR(dateOfBirthday),1,0)YEAR)  BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL 30 DAY)";
 			
 
 			$exec = mysqli_query($con,$query);

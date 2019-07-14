@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 14, 2019 at 09:29 AM
+-- Generation Time: Jul 14, 2019 at 05:15 PM
 -- Server version: 10.1.40-MariaDB
 -- PHP Version: 7.1.29
 
@@ -119,10 +119,12 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`userID`, `firstName`, `lastName`, `perferredName`, `dateOfBirthday`, `officialEmail`, `personalEmail`, `mobile`, `facebookLink`, `designaion`, `nic`, `studentNo`, `foodPreference`, `note`, `userType`, `password`, `organizingRole`) VALUES
-(1, 'dilan', 'perera', 'dilan', '1996-07-12', '', 'dupdilan@gmail.com', '0767985200', '', '', '961850797v', 'IM/2016/057', 'Non-Veg', 'test', 'Student', 'test', 1),
+(1, 'dilan', 'perera', 'dilan', '1996-07-12', '', 'dupdilan@gmail.com', '0767985200', '', '', '961850797v', 'IM/2016/057', 'Non-Veg', 'test', 'Student', 'test', 0),
 (2, 'nimal', 'perera', 'nimal', '1995-07-13', 'asd@gmail.com', '', '0712345678', '', '', '123456782v', '', 'Veg', '0', 'Student', 'test', 0),
 (3, 'asd', 'asd', 'asd', '1948-02-04', 'bmndas@gmail.com', '', '07123456789', '', '', '123456712v', '', '', 'asd', 'Temporry Staff', 'test', 0),
-(4, 'asd', 'perera', 'nimal', '1969-07-13', 'asd@gmail.com', '', '0712345678', '', 'lecture', '123456789v', '', 'Non-Veg', '0', 'Academic Staff', 'test1', 1);
+(4, 'asd', 'perera', 'nimal', '1969-07-13', 'asd@gmail.com', '', '0712345678', '', 'lecture', '123456789v', '', 'Non-Veg', '0', 'Academic Staff', 'test1', 1),
+(5, 'asd', 'asd', 'asd', '2000-07-14', 'asd@gmail.com', '', '0712344567', '', '', '961850792v', '', 'Veg', '', 'Administrative Staff', 'test', 0),
+(6, 'lakshitha', 'kara', 'kara', '1996-07-20', 'lakshitha@gmail.com', '', '0764578945', '', '', '9617845751v', 'IM/2016/084', 'Non-Veg', '', 'Student', '', 0);
 
 --
 -- Indexes for dumped tables

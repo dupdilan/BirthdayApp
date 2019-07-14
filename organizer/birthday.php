@@ -72,10 +72,24 @@
             </div>
 
     <hr>
-    <h3>Nect Week birthday</h3>
+    <h3>Next Week birthday</h3>
+    <div>
+                    <?php
+                                 
+                        require_once("php_action/nextWeekBirthday.php");
+                                                
+                    ?>
+            </div>
 
     <hr>
     <h3>Next Month birthday</h3>
+    <div>
+                    <?php
+                                 
+                        require_once("php_action/nextmonthBirthday.php");
+                                                
+                    ?>
+            </div>
     
     
     <hr>
