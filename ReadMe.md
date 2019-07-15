@@ -1,4 +1,4 @@
-##PHP BIRTHDAYS WEB APPLICATION
+##PHP BIRTHDAYS WEB APPLICATION (Pure HTML + PHP ) 
 ---------------------------------------------------------------------
 #Run The Application
 ---------------------------------------------------------------------
